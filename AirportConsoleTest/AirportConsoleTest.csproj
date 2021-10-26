@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B61C975-48E7-4739-A785-CBAA1C00FA74}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AirportConsoleTest</RootNamespace>
+    <AssemblyName>AirportConsoleTest</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL\2.BL.csproj">
+      <Project>{b68d5bb0-0ad6-4c54-98ce-e7c28b136468}</Project>
+      <Name>2.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\3.DAL.csproj">
+      <Project>{d3269f30-319e-4d7b-806a-fbdebedef546}</Project>
+      <Name>3.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\1.Models.csproj">
+      <Project>{96A52877-95D4-4441-BA87-6A3E50719F25}</Project>
+      <Name>1.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\4.Services.csproj">
+      <Project>{67ba3246-e7dc-4f40-a169-a80318fe3155}</Project>
+      <Name>4.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimulatorAirport\5.SimulatorAirport.csproj">
+      <Project>{2b57dd3b-5a56-4af7-9add-fda497842a3c}</Project>
+      <Name>5.SimulatorAirport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UI_WPF\7.UI_WPF2.csproj">
+      <Project>{12730a2c-af9d-4e89-95a2-dca480003674}</Project>
+      <Name>7.UI_WPF2</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
